@@ -75,7 +75,7 @@ namespace NSJSBase
 		virtual ~CJSEmbedObjectPrivateBase();
 	};
 
-    class JS_DECL CJSEmbedObject
+	class JS_DECL CJSEmbedObject
 	{
 	public:
 		CJSEmbedObject();
@@ -204,6 +204,9 @@ namespace NSJSBase
 		void Enter();
 		void Exit();
 
+		// Emdebing objects
+//		void Embed(const std::string& creatorName);
+
 		JSSmart<CJSValue> runScript(const std::string& script, JSSmart<CJSTryCatch> exception = NULL, const std::wstring& scriptPath = std::wstring(L""));
 		CJSValue* JSON_Parse(const char* json_content);
 		void MoveToThread(ASC_THREAD_ID* id = NULL);
@@ -258,5 +261,6 @@ namespace NSJSBase
 		~CJSContextScope();
 	};
 }
+
 
 #endif // _CORE_EXT_JS_BASE_H_

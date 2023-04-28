@@ -33,11 +33,6 @@ namespace NSJSBase {
 		RELEASEOBJECT(embed_native_internal);
 	}
 
-	void* CJSEmbedObject::getObject()
-	{
-		return NULL;
-	}
-
 	CJSObject::CJSObject()
 	{
 	}
